@@ -251,7 +251,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 .styled-input {
     float: left;
-    width: 293px;
+    /* width: 293px; */
     margin: 1rem 0;
     position: relative;
     border-radius: 4px;
@@ -259,7 +259,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 @media only screen and (max-width: 768px){
     .styled-input {
-        width:100%;
+        width:400px;
     }
 }
 
@@ -275,7 +275,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .styled-input.wide { 
-    width: 450px;
+    width: 650px;
     max-width: 100%;
 }
 
@@ -306,9 +306,9 @@ textarea {
 }
 
 .input-container {
-    width: 450px;
+    width: 650px;
     max-width: 100%;
-    margin: 20px auto 25px auto;
+    margin: 20px auto;
 }
 
 .submit-btn {
@@ -336,15 +336,6 @@ textarea {
     }
 }
 
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-} 
-
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
-}
 
 /* toggle */
 
@@ -384,7 +375,7 @@ input[type=checkbox]:checked + label {
 }
 
 /* lightbox */
-        
+/*         
     .lightbox-target img {
     margin: auto;
     position: fixed;
@@ -410,5 +401,5 @@ input[type=checkbox]:checked + label {
     .lightbox-target:target img {
     max-height: 100%;
     max-width: 100%;
-    }
+    } */
     
