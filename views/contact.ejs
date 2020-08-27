@@ -1,0 +1,37 @@
+<%-include("partials/header"); %>
+<div class="contact">
+    <div class="container">
+        <h1>Contact</h1>
+        <div class="fade">
+            <p class="center">Have any questions or just want to chat? Send me a message and I will respond in 24 hours!</p>
+            <form action="/contact" id="contact-form" method="POST" role="form">
+            <div class="row input-container">
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input id="name" name="name" type="text" required />
+                            <label>Name</label> 
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input id="email" name="email" type="text" required />
+                            <label>Email</label> 
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <textarea id="message" name="message" required></textarea>
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <button class="btn-lrg submit-btn">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%-include("partials/footer"); %>
+

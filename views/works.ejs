@@ -1,0 +1,58 @@
+<%-include("partials/header");%>
+<div class="works">
+    <div class="container">
+        <h1>Works</h1>
+        <div class="fade">
+            <h6>Code</h6>
+            <hr>
+            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+                <div class="col-md-4 col-sm-6">
+                    <div class="thumbnail">
+                        <a href="https://github.com/sophieli8723"><img class="work-thumb" src="https://miro.medium.com/max/2732/1*mtsk3fQ_BRemFidhkel3dA.png"></a>
+                        <div class="caption">
+                            <p>My GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h6>Webpage Designs</h6>
+            <hr>
+            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+                <% websites.forEach(function(website){ %>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                            <a href="<%=website.url%>"><img class="work-thumb" src="<%= website.image;%>"></a>
+                            <div class="caption">
+                                <p> <%= website.caption;%></p>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+            <h6 id="#illustration">Graphic Design & Illustration</h6>
+            <hr>
+            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+                <% illustrations.forEach(function(illustration){ %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+                            <!-- <a href="#<%=illustration.id%>"> -->
+                                <img class="work-thumb" src="<%= illustration.image;%>">
+                            <!-- </a> -->
+                            <div class="caption">
+                                <p> <%= illustration.caption;%></p>
+                            </div>
+                        </div>
+                        <!-- <div class="lightbox-target" id="<%=illustration.id%>">
+                            <a href="#illustration"><img src="<%= illustration.image;%>"></a>
+                        </div> -->
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<%-include("partials/footer");%>
