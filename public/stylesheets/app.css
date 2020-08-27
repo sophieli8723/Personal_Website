@@ -78,7 +78,7 @@ strong {
 /* header*/
 
 .navbar-custom {
-    /* background-color: rgb(17, 17, 32); */
+    background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 200ms linear;
     z-index: 1;
    }
@@ -112,9 +112,10 @@ strong {
 
 .home{
     background-image: url("https://i.imgur.com/Z5hCmjf.png?2");
+    
     height: 645px;
     padding: 1px;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -140,7 +141,7 @@ h1.home-text {
 .about{
     background-image: url("https://i.imgur.com/2r0tNwD.jpg");
     padding: 1px;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -178,7 +179,7 @@ h1.home-text {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
 }
 
 .work-thumb {
@@ -223,7 +224,7 @@ h4 {
 .contact {
     background-image: url("https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1631&q=80");
     padding: 1px;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
