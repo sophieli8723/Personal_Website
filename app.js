@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('dotenv').config();
 
 
-mongoose.connect('mongodb://localhost:27017/personal_website', {
+// mongoose.connect('mongodb://localhost:27017/personal_website', {
+  mongoose.connect('mongodb+srv://sophieli8723:'+process.env.AUTH_MONGO+'@cluster0.bxznh.mongodb.net/personal_website?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
     })
