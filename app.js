@@ -77,7 +77,7 @@ app.post('/contact', (req, res) => {
         cliendId: process.env.AUTH_ID,
         clientSecret: process.env.AUTH_SECRET,
         refreshToken: process.env.AUTH_REFRESH,
-        accessToken: process.env.AUTH_ACCESS;
+        accessToken: process.env.AUTH_ACCESS
       }
     });
   
