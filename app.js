@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('dotenv').config();
 
 
+
 // mongoose.connect('mongodb://localhost:27017/personal_website', {
   mongoose.connect(process.env.AUTH_MONGO, {
     useNewUrlParser: true,
@@ -26,6 +27,7 @@ app.use(express.static("scripts"))
 app.set("view engine", "ejs");
 
 // seedDB();
+
 
 app.get("/", function(req, res) {
     res.redirect("/home");
@@ -66,31 +68,32 @@ app.get("/contact", function(req, res){
 // POST route from contact form
 app.post('/contact', (req, res) => {
 
+
     // Instantiate the SMTP server
-    const smtpTrans = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
-      auth: {
-        type: 'OAuth2',
+
+   var smtpTransport = nodemailer.createTransport({
+    service: "hotmail",
+    host: "smtp.office365.com",
+    port: 587,
+    auth: {
         user: process.env.AUTH_USER,
-        cliendId: process.env.AUTH_ID,
-        clientSecret: process.env.AUTH_SECRET,
-        refreshToken: process.env.AUTH_REFRESH,
-        accessToken: process.env.AUTH_ACCESS
-      }
-    });
+        pass: process.env.AUTH_PASS
+    },
+    debug: false,
+    logger: true
+});
+
   
     // Specify what the email will look like
     const mailOpts = {
       from: 'Your sender info here', // This is ignored by Gmail
-      to: "srli@princeton.edu",
+      to: process.env.AUTH_RECIPIENT,
       subject: 'New message from contact form',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     }
   
     // Attempt to send the email
-    smtpTrans.sendMail(mailOpts, (error, response) => {
+    smtpTransport.sendMail(mailOpts, (error, response) => {
       if (error) {
         res.render('contact-failure') // Show a page indicating failure
       }
