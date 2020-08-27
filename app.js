@@ -75,10 +75,14 @@ app.post('/contact', (req, res) => {
     service: "hotmail",
     host: "smtp.office365.com",
     port: 587,
+    secureConnection: false,
     auth: {
         user: process.env.AUTH_USER,
         pass: process.env.AUTH_PASS
     },
+    tls: {
+      ciphers:'SSLv3'
+      },
     debug: false,
     logger: true
 });
