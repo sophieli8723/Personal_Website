@@ -72,13 +72,13 @@ app.post('/contact', (req, res) => {
       port: 465,
       secure: true,
       auth: {
+        type: 'OAuth2',
         user: process.env.AUTH_USER,
-        pass: process.env.AUTH_PASS
-      },
-      tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false
-    }
+        cliendId: process.env.AUTH_ID,
+        clientSecret: process.env.AUTH_SECRET,
+        refreshToken: process.env.AUTH_REFRESH,
+        accessToken: process.env.AUTH_ACCESS;
+      }
     });
   
     // Specify what the email will look like
