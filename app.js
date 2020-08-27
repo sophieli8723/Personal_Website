@@ -74,8 +74,12 @@ app.post('/contact', (req, res) => {
       auth: {
         user: process.env.AUTH_USER,
         pass: process.env.AUTH_PASS
-      }
-    })
+      },
+      tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false
+    }
+    });
   
     // Specify what the email will look like
     const mailOpts = {
