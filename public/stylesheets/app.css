@@ -275,7 +275,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .styled-input.wide { 
-    width: 650px;
+    width: 450px;
     max-width: 100%;
 }
 
@@ -306,7 +306,7 @@ textarea {
 }
 
 .input-container {
-    width: 650px;
+    width: 450px;
     max-width: 100%;
     margin: 20px auto 25px auto;
 }
