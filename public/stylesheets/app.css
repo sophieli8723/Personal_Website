@@ -3,16 +3,17 @@
 html {
     height: 100%;
     box-sizing: border-box;
+    background-color: black;
   }
   
 body {
-    /* background: #0f0c29; 
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);  */
     position: relative;
     min-height: 100%;
     color: white;
     padding-bottom: 150px;
+    /* animation: fadeInAnimation 1000ms ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
     } 
 
 h1 {
@@ -29,7 +30,7 @@ h1 {
 
 h1:hover{
     -webkit-transform:scale(1.05); 
-    transform:scale(1.05);
+    transform:scale(1.02);
     color: rgb(255, 166, 0);
 }
 
@@ -55,6 +56,7 @@ hr{
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    animation: linearWipe 2000ms ease-in;
     }
 
 strong {
@@ -97,9 +99,7 @@ strong {
     bottom: 0;
     width: 100%;
     padding: 1rem;
-    background: #0f0c29; 
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    background: rgb(18, 15, 37);
     text-align: center;
     height: 150px;
   }
@@ -124,6 +124,12 @@ strong {
     color: rgb(255, 255, 255);
 }
 
+.fixed{
+    position: fixed;
+    text-align: center;
+    padding: 3% 10%;
+}
+
 p.home-text {
     animation: fadeInAnimation ease-in 4s;
     animation-iteration-count: 1; 
@@ -139,7 +145,7 @@ h1.home-text {
 
 /* About */
 .about{
-    background-image: url("https://i.imgur.com/2r0tNwD.jpg");
+    background-image: url("https://i.imgur.com/XERhJLX.jpg");
     padding: 1px;
     background-position: center top;
     background-repeat: no-repeat;
@@ -152,13 +158,15 @@ h1.home-text {
     height: 100%;
     padding: 10px 20px;
     border-radius: 50px;
-    transition: transform 200ms linear;
+    transition: all 200ms linear;
+    box-shadow: 0 0 10px 1px rgba(255, 255,255, 0.1);
 }
 
 .box:hover{
     -webkit-transform:translateY(-8px); 
     transform:translateY(-8px);
-    background-color: rgba(234, 0, 255, 0.6);
+    background-color: rgba(25, 15, 85, 0.8);
+    box-shadow: 0 0 30px 5px rgba(255, 255,255, 0.2);
 }
 
 .big-icon {
@@ -170,7 +178,7 @@ h1.home-text {
     margin: 0 auto;
     width: 70%;
     border-radius: 20px;
-    box-shadow: 10px 10px black;
+    /* box-shadow: 10px 10px black; */
 }
 
 /* Works */
@@ -355,6 +363,18 @@ textarea {
         opacity: 1; 
     } 
 } 
+
+@keyframes linearWipe {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 @keyframes slideDownAnimationTitle {
     0% {
