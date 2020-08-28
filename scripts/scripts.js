@@ -9,3 +9,19 @@ $(document).scroll(function () {
       $("nav").removeClass('navbar-light')
    }
    });
+
+   $(document).ready(function() {
+      $('body').css('display', 'none');
+      $('body').fadeIn(500);
+      $('a').click(function() {
+      event.preventDefault();
+      newLocation = this.href;
+      $('body').fadeOut(300, newpage);
+      });
+      function newpage() {
+      window.location = newLocation;
+      }
+      });
+    
+      
+ 
