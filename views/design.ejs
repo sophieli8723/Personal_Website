@@ -1,0 +1,131 @@
+<%-include("partials/header");%>
+<div class="works">
+    <div class="container">
+        <h1>Webpage Designs</h1>
+        <hr class="style1">
+        <div class="fade">
+            <a href="/works"><button class="btn btn-primary btn-sm">Back to all works</button></a>
+            <div class="panel">
+                <div>
+                    <h3>My Designs for Computer Science Council</h3>
+                    <p>
+                        I am the Tech Chair for the Princeton Computer Science Council, a group of undergraduates
+                        that serve as liaisons between students and the Computer Science Department. In addition to my
+                        responsibilities regarding our official website and social media, I am also in charge of designing
+                        social media posts, promotional images, and merchandise. Here are several designs I have contributed to
+                        the council.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <% COS.forEach(function(illustration){ %>
+                        <div class="col-lg-6">
+                            <div class="thumbnail">
+                               <img class="work-thumb" src="<%=illustration.image%>">
+                                <div>
+                                    <p>
+                                    <%=illustration.caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel">
+                <div>
+                    <h3>My Designs for Laiye Technology</h3>
+                    <p>
+                        During my product marketing internship at Laiye Technology over Summer 2020, I helped
+                        design flyers, brochures, landing pages, and more to help with out global marketing campaign.
+                        This has helped Laiye's team expand their global outreach. Here are some designs I have created
+                        during the internship.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <% laiye.forEach(function(illustration){ %>
+                        <div class="col-lg-6">
+                            <div class="thumbnail">
+                               <img class="work-thumb" src="<%=illustration.image%>">
+                                <div>
+                                    <p>
+                                    <%=illustration.caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+
+
+
+            <div class="panel">
+                <div>
+                    <h3>My Designs for High School Organizations</h3>
+                    <p>
+                        During high school, I was actively involved in many organizations such as 
+                        the Associated Student Body (ASB) and Project SNAP, a charity for the intellectually disabled.
+                        I have helped create logos, posters, and more to help promote events or raise awareness.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <% hs.forEach(function(illustration){ %>
+                        <div class="col-lg-6">
+                            <div class="thumbnail">
+                               <img class="work-thumb" src="<%=illustration.image%>">
+                                <div>
+                                    <p>
+                                    <%=illustration.caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+
+            <div class="panel">
+                <div>
+                    <h3>My Personal Art</h3>
+                    <p>
+                        In my free time, drawing and digital art are my most cherished hobbies. 
+                        I am always eager to explore different styles to freely express myself. 
+                        Below are some of my personal works. I hope you enjoy them!
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <% personal.forEach(function(illustration){ %>
+                        <div class="col-lg-6">
+                            <div class="thumbnail">
+                               <img class="work-thumb" src="<%=illustration.image%>">
+                                <div>
+                                    <p>
+                                    <%=illustration.caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<%-include("partials/footer");%>

@@ -1,0 +1,38 @@
+<%-include("partials/header");%>
+<div class="works">
+    <div class="container">
+        <h1>Webpage Designs</h1>
+        <hr class="style1">
+        <div class="fade">
+            <a href="/works"><button class="btn btn-primary btn-sm">Back to all works</button></a>
+            <div class="panel">
+                <div>
+                    <h3>My designs</h3>
+                    <p>
+                        Over the years, I have been involved in many webpage designs. At first, I designed the visual layout for websites. Gradually, I 
+                        began experimenting with web-builder sites. During the summer of 2020, I self-studied full-stack web development and began to code my
+                        own websites. In fact, this website you are currently on was coded from scratch! I look forward to building more websites in the future.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <% website.forEach(function(website){ %>
+                        <div class="col-lg-6">
+                            <div class="thumbnail">
+                                <a href="<%=website.url%>"><img class="work-thumb" src="<%=website.image%>">
+                                </a>
+                                <div>
+                                    <p>
+                                    <%=website.caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+
+
+<%-include("partials/footer");%>

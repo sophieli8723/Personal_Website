@@ -3,56 +3,60 @@
     <div class="container">
         <h1>Works</h1>
         <div class="fade">
-            <h6>Code</h6>
-            <hr>
-            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-                <div class="col-md-4 col-sm-6">
-                    <div class="thumbnail">
-                        <a href="https://github.com/sophieli8723"><img class="work-thumb" src="https://miro.medium.com/max/2732/1*mtsk3fQ_BRemFidhkel3dA.png"></a>
-                        <div class="caption">
-                            <p>My GitHub</p>
+        <hr class="style1">
+
+            <div class="row">
+                <div class="col-lg-12 container">
+                    <a href="/works/code">
+                    <div class="strip">
+                        <div class="big-icon">
+                            <i class="fa fa-code" aria-hidden="true"></i>
                         </div>
+                        <h3>Code</h3>
+                        <p class="center"><strong>Check out the code I have written.</strong></p>
                     </div>
+                </a>
                 </div>
             </div>
-
-            <h6>Webpage Designs</h6>
-            <hr>
-            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-                <% websites.forEach(function(website){ %>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="thumbnail">
-                            <a href="<%=website.url%>"><img class="work-thumb" src="<%= website.image;%>"></a>
-                            <div class="caption">
-                                <p> <%= website.caption;%></p>
+            <div class="row">
+                <div class="col-lg-12 container">
+                    <a href="/works/webpage">
+                        <div class="strip">
+                            <div class="big-icon">
+                                <i class="fa fa-window-maximize" aria-hidden="true"></i>
                             </div>
+                            <h3>Webpage Designs</h3>
+                            <p class="center"><strong>Visit the websites I have designed.</strong></p>
                         </div>
-                    </div>
-                <% }); %>
+                    </a>
+                </div>
             </div>
-
-            <h6 id="#illustration">Graphic Design & Illustration</h6>
-            <hr>
-            <div class="row text-center" style="display:flex; flex-wrap:wrap;">
-                <% illustrations.forEach(function(illustration){ %>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="thumbnail">
-                            <!-- <a href="#<%=illustration.id%>"> -->
-                                <img class="work-thumb" src="<%= illustration.image;%>">
-                            <!-- </a> -->
-                            <div class="caption">
-                                <p> <%= illustration.caption;%></p>
+            <div class="row">
+                <div class="col-lg-12 container">
+                    <a href="/works/design">
+                        <div class="strip">
+                            <div class="big-icon">
+                                <i class="fa fa-paint-brush" aria-hidden="true"></i>
                             </div>
+                            <h3>Graphic Design and Illustration</h3>
+                            <p class="center"><strong>Take a look at my graphic designs and illustrations.</strong></p>
                         </div>
-                        <!-- <div class="lightbox-target" id="<%=illustration.id%>">
-                            <a href="#illustration"><img src="<%= illustration.image;%>"></a>
-                        </div> -->
-                    </div>
-                <% }); %>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 container">
+                    <a href="/works/marketing">
+                        <div class="strip">
+                            <div class="big-icon">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            </div>
+                            <h3>Content Marketing</h3>
+                            <p class="center"><strong>Read the content I have put out during my marketing internship.</strong></p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        </div>
-    </div>
-
 
 <%-include("partials/footer");%>

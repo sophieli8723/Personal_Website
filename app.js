@@ -26,7 +26,7 @@ app.use(express.static("scripts"))
 
 app.set("view engine", "ejs");
 
-// seedDB();
+seedDB();
 
 
 app.get("/", function(req, res) {
@@ -59,6 +59,35 @@ app.get("/works", function(req, res) {
     })
 })
 
+app.get("/works/code", function(req, res) {
+  res.render("code");
+})
+
+app.get("/works/webpage", function(req, res) {
+  Website.find({type:"webpage"}, function(err, codeWebsites) {
+    if (err) console.log(err);
+    else {
+      res.render("webpage", {website: codeWebsites});
+      
+    }
+})
+})
+
+app.get("/works/design", function(req, res) {
+  Illustration.find({type: "COS"}, function(err, COS) {
+    Illustration.find({type: "Laiye"}, function(err, laiye){
+      Illustration.find({type: "hs"}, function(err, hs) {
+        Illustration.find({type: "personal"}, function(err, personal) {
+           res.render("design", {COS: COS, laiye: laiye, hs: hs, personal: personal});
+        })
+      })
+    })
+  })
+})
+
+app.get("/works/marketing", function(req, res) {
+  res.render("marketing");
+})
 
 app.get("/contact", function(req, res){
     res.render("contact");
